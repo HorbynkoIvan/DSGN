@@ -1,0 +1,23 @@
+@mixin fontFace($FontName, $FontPathName ) {
+  @font-face {
+    font-family: '#{$FontName}';
+    src: url('/assets/fonts/#{$FontPathName}.woff2') format('woff2'),
+    url('/assets/fonts/#{$FontPathName}.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include fontFace('RobotoCondensedBold', 'robotocondensed-bold-webfont');
+@include fontFace('RobotoCondensedBoldItalic', 'robotocondensed-bolditalic-webfont');
+@include fontFace('RobotoCondensedItalic', 'robotocondensed-italic-webfont');
+@include fontFace('RobotoCondensedLight', 'robotocondensed-light-webfont');
+@include fontFace('RobotoCondensedLightItalic', 'robotocondensed-lightitalic-webfont');
+@include fontFace('RobotoCondensedRegular', 'robotocondensed-regular-webfont');
+
+$roboto_condensedbold: 'RobotoCondensedBold', Arial, Helvetica, sans-serif;
+$roboto_condensedbold_italic: 'RobotoCondensedBoldItalic', Arial, Helvetica, sans-serif;
+$roboto_condenseditalic: 'RobotoCondensedItalic', Arial, Helvetica, sans-serif;
+$roboto_condensedlight: 'RobotoCondensedLight', Arial, Helvetica, sans-serif;
+$roboto_condensedlight_italic: 'RobotoCondensedLightItalic', Arial, Helvetica, sans-serif;
+$roboto_condensedregular: 'RobotoCondensedRegular', Arial, Helvetica, sans-serif;
