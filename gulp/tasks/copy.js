@@ -2,8 +2,8 @@ module.exports = function () {
     $.gulp.task('copy', function () {
         return $.gulp.src(
             [
-                '/assets/fonts/**/*.{woff,woff2}',
-                '/assets/img/**',
+                'assets/fonts/**/*.{woff,woff2}',
+                'assets/img/**',
                 '*.html'
             ],
             {base: '.'}
