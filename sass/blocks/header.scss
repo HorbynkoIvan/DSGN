@@ -1,0 +1,87 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+
+  .header__left {
+    grid-column: span 11;
+    padding-left: 15.9%; //165/1035
+    padding-top: 4.8%; //50/1035
+    padding-bottom: 8.7%; //90/1035
+    background: url('/assets/img/image1.png') 100% center no-repeat;
+    background-size: 100%;
+
+    .header__logo {
+      display: block;
+      max-width: 100%;
+    }
+
+    .header__slogan {
+      font-size: 18px;
+      color: $colorText;
+      text-transform: uppercase;
+      line-height: 1;
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    .header__socials {
+      margin-top: 60px;
+      margin-left: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .header__right {
+    grid-column: span 5;
+    background: $second;
+    padding-top: 10.7%; //50/465
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>');
+    }
+
+    .header__address {
+      font-size: 13px;
+      color: $white;
+      text-transform: uppercase;
+      line-height: 1.077;
+      position: absolute;
+      left: 12.9%;
+      bottom: 36.5%;
+      margin: 0;
+    }
+
+    .header__contacts {
+      font-size: 13px;
+      color: $white;
+      text-transform: uppercase;
+      line-height: 1.077;
+      left: 29%;
+      bottom: 20%;
+      position: absolute;
+      margin: 0;
+
+    }
+
+    .header__tel, .header__mail {
+      color: $white;
+      line-height: 1.077;
+      text-decoration: none;
+      display: inline-block;
+      transition-property: color;
+      transition-duration: 500ms;
+
+      &:hover {
+        color: $activeTextColor;
+      }
+
+    }
+  }
+}
